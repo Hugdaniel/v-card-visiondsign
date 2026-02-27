@@ -3,30 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>v-card personal</title>
+    <title>Mi Tarjeta Digital</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <div class="vcard-container">
-    <header class="vcard-header">
-        <img src="aseet/tu-foto.png" id="foto-perfil" alt="Tu Logo">
-        <h1>Daniel Barrios</h1>
-        <p>Desarrollador Web & Creativo</p>
-    </header>
+        <header>
+            <img id="img-perfil" src="" alt="Foto de Perfil" class="foto-perfil">
+            
+            <h1 id="txt-nombre">Cargando...</h1>
+            <p id="txt-profesion">Cargando...</p>
+        </header>
 
-    <main class="vcard-buttons">
-        <button id="btn-whatsapp" class="btn-vcard">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </button>
-        
-        <button id="btn-instagram" class="btn-vcard">
-            <i class="fab fa-instagram"></i> Instagram
-        </button>
+        <main class="vcard-buttons">
+            
+            <button id="btn-whatsapp" class="btn-vcard">
+                <span>WhatsApp</span>
+            </button>
+            
+            <button id="btn-instagram" class="btn-vcard">
+                <span>Instagram</span>
+            </button>
 
-        <button id="btn-save" class="btn-vcard btn-highlight">
-            <i class="fas fa-user-plus"></i> Guardar Contacto
-        </button>
-    </main>
-</div>
+            <button id="btn-guardar" class="btn-vcard btn-destacado">
+                <span>Guardar Contacto</span>
+            </button>
+
+        </main>
+
+        <!-- frase final -->
+         <div class="slogan">
+            <p>"Transformando ideas en experiencias digitales"</p>
+         </div>
+
+        <!-- <footer class="estudio-footer">
+            <p>Diseñado por <span id="txt-estudio">...</span></p>
+        </footer> -->
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
