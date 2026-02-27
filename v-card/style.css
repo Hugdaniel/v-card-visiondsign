@@ -1,22 +1,26 @@
 /* vcard.css */
 body {
-    background: linear-gradient(135deg, #1e1e1e, #333); /* Fondo oscuro elegante */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: #0575E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .vcard-container {
     background: rgba(255, 255, 255, 0.1); /* Transparencia */
     backdrop-filter: blur(10px); /* Desenfoque de vidrio */
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 20px;
     padding: 30px;
     width: 90%;
     max-width: 350px;
     text-align: center;
     color: white;
+    font-family: poppins, sans-serif;
 }
 
 .btn-vcard {
