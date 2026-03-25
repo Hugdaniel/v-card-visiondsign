@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Tarjeta Digital</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>vCard — Vision Design</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <div class="vcard-container">
-        <header>
-            <img id="img-perfil" src="" alt="Foto de Perfil" class="foto-perfil">
-            
-            <h1 id="txt-nombre">Cargando...</h1>
-            <p id="txt-profesion">Cargando...</p>
-        </header>
-
-        <main class="vcard-buttons">
-            
-            <button id="btn-whatsapp" class="btn-vcard">
-                <span>WhatsApp</span>
-            </button>
-            
-            <button id="btn-instagram" class="btn-vcard">
-                <span>Instagram</span>
-            </button>
-
-            <button id="btn-guardar" class="btn-vcard btn-destacado">
-                <span>Guardar Contacto</span>
-            </button>
-
-        </main>
-
-        <!-- frase final -->
-         <div class="slogan">
-            <p>"Transformando ideas en experiencias digitales"</p>
-         </div>
-
-        <!-- <footer class="estudio-footer">
-            <p>Diseñado por <span id="txt-estudio">...</span></p>
-        </footer> -->
+  <!-- Acá va a vivir toda la tarjeta -->
+   <div class="card">
+    <div class="profile">
+        <div class="logo">
+            <img src="assets/logo-vision.png" alt="Logo de Vision Design" />
+        </div>
+        <h1>Daniel Barrios</h1>
+        <p class="rol">Desarrollador Web & Diseño Gráfico</p>
+        <p class="ciudad">Merlo, Buenos Aires</p>
     </div>
 
-    <script src="config.js"></script>
-    <script src="main.js"></script>
+    <div class="servicios">
+        <h2>servicios</h2>
+
+        <div class="servicio-item">
+            <span class="icono">🌐</span>
+        <div>
+        <h3>Desarrollo Web</h3>
+        <p>Sitios web, landing pages, tarjetas digitales web a medida</p>
+        </div>
+        </div>
+
+    <div class="servicio-item">
+        <span class="icono">🎨</span>
+        <div>
+            <h3>Diseño Grafico</h3>
+            <p>Identidad Visual, logos y material para redes sociales</p>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- botones -->
+
+    <div class="contacto">
+      <h2>Contacto</h2>
+
+      <a class="btn btn-whatsapp" href="https://wa.me/5491137878083" target="_blank">
+        <span>💬</span> WhatsApp
+      </a>
+
+      <a class="btn btn-email" href="mailto:85hbdaniel@gmail.com" target="_blank">
+        <span>✉️</span> Email
+      </a>
+
+      <div class="redes">
+        <a href="https://instagram.com/visiondesign_ok" target="_blank">Instagram</a>
+        <a href="https://behance.net/tuusuario" target="_blank">Behance</a>
+      </div>
+
+    </div>
+
+
+   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
