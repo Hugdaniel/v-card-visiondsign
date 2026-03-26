@@ -1,0 +1,367 @@
+/* ── RESET ──────────────────────────────
+   Elimina los estilos por defecto del navegador.
+   Cada navegador tiene márgenes y paddings
+   distintos, esto los neutraliza a todos.
+─────────────────────────────────────────*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── VARIABLES ───────────────────────────
+   Guardamos todos los colores en un solo lugar.
+   Si mañana querés cambiar el acento,
+   lo cambiás acá y se actualiza en toda la página.
+─────────────────────────────────────────*/
+:root {
+  --bg-page:        #0a0a0f;
+  --bg-card:        #10101a;
+  --bg-seccion:     #15152a;
+  --acento:         #6c63ff;
+  --acento-hover:   #4e46e5;
+  --texto-primary:  #ffffff;
+  --texto-secondary:#a0a0b0;
+  --borde:          #1e1e3a;
+}
+
+/* ── BODY ────────────────────────────────
+   Centra la tarjeta en la pantalla
+   y aplica el wave como fondo.
+─────────────────────────────────────────*/
+body {
+  background-color: var(--bg-page);
+  background-image: url('/assets/wave.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--texto-primary);
+}
+
+/* ── TARJETA ─────────────────────────────
+   El contenedor principal de todo el contenido.
+─────────────────────────────────────────*/
+.card {
+  background-color: var(--bg-seccion);
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(108, 99, 255, 0.15);
+  border: 1px solid var(--borde);
+}
+
+/* ── PERFIL ──────────────────────────────
+   La sección superior de la tarjeta.
+─────────────────────────────────────────*/
+.profile {
+  background-color: var(--bg-seccion);
+  padding: 40px 20px 32px;
+  text-align: center;
+  border-bottom: 1px solid var(--borde);
+}
+
+/* ── AVATAR ──────────────────────────────
+   Contenedor del logo.
+─────────────────────────────────────────*/
+.avatar {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  border: 2px solid var(--acento);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ── TEXTOS DEL PERFIL ───────────────────*/
+.profile h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--texto-primary);
+  margin-bottom: 6px;
+}
+
+.profile .rol {
+  font-size: 0.9rem;
+  color: var(--acento);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.profile .ciudad {
+  font-size: 0.8rem;
+  color: var(--texto-secondary);
+}
+
+/* ── SERVICIOS ───────────────────────────
+   Lista de servicios que ofrecés.
+─────────────────────────────────────────*/
+.servicios {
+  padding: 28px 24px;
+  border-bottom: 1px solid var(--borde);
+}
+
+.servicios h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--texto-secondary);
+  margin-bottom: 20px;
+}
+
+/* ── CADA ITEM ───────────────────────────*/
+.servicio-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.servicio-item:last-child {
+  margin-bottom: 0;
+}
+
+.icono {
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.servicio-item h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--texto-primary);
+  margin-bottom: 4px;
+}
+
+.servicio-item p {
+  font-size: 0.8rem;
+  color: var(--texto-secondary);
+  line-height: 1.5;
+}
+
+/* ── CONTACTO ────────────────────────────
+   Botones de WhatsApp, email y redes.
+─────────────────────────────────────────*/
+.contacto {
+  padding: 28px 24px;
+  border-bottom: 1px solid var(--borde);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contacto h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--texto-secondary);
+  margin-bottom: 8px;
+}
+
+/* ── BOTONES ─────────────────────────────*/
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1da851;
+}
+
+.btn-email {
+  background-color: transparent;
+  color: var(--acento);
+  border: 1px solid var(--acento);
+}
+
+.btn-email:hover {
+  background-color: var(--acento);
+  color: #ffffff;
+}
+
+/* ── REDES ───────────────────────────────*/
+.redes {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.redes a {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--texto-secondary);
+  border: 1px solid var(--borde);
+  transition: all 0.2s ease;
+}
+
+.redes a:hover {
+  color: var(--acento);
+  border-color: var(--acento);
+}
+
+/* ── CHAT ────────────────────────────────
+   Sección del chatbot.
+─────────────────────────────────────────*/
+.chat {
+  padding: 28px 24px;
+}
+
+.chat h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--texto-secondary);
+  margin-bottom: 16px;
+}
+
+/* ── ÁREA DE MENSAJES ────────────────────*/
+.chat-box {
+  height: 260px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-right: 4px;
+}
+
+.chat-box::-webkit-scrollbar {
+  width: 4px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: var(--borde);
+  border-radius: 4px;
+}
+
+/* ── BURBUJAS ────────────────────────────*/
+.bubble {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.bubble.bot {
+  background-color: var(--bg-seccion);
+  color: var(--texto-primary);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+  border: 1px solid var(--borde);
+}
+
+.bubble.user {
+  background-color: var(--acento);
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+/* ── SUGERENCIAS ─────────────────────────*/
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.suggestion-btn {
+  background: transparent;
+  border: 1px solid var(--acento);
+  color: var(--acento);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.suggestion-btn:hover {
+  background-color: var(--acento);
+  color: #ffffff;
+}
+
+/* ── INPUT ───────────────────────────────*/
+.chat-input {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input input {
+  flex: 1;
+  background-color: var(--bg-seccion);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 10px 16px;
+  color: var(--texto-primary);
+  font-size: 0.85rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.chat-input input:focus {
+  border-color: var(--acento);
+}
+
+.chat-input button {
+  background-color: var(--acento);
+  border: none;
+  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.chat-input button:hover {
+  background-color: var(--acento-hover);
+}
