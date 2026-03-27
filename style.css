@@ -30,11 +30,14 @@
    y aplica el wave como fondo.
 ─────────────────────────────────────────*/
 body {
-  background-color: var(--bg-page);
-  background-image: url('/assets/wave.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* https://grabient.com/HQFgrA7ANKBsCcMBMBGWMTyRsJlL2AA5YwYJ4BmGI3GWEQsJaS0ABnZhTGpThQxmggLTB2YIkA?angle=45 */
+
+background: linear-gradient(45deg, #000030 0.000%, #61070e 25.000%, #e05211 50.000%, #ffbd39 75.000%, #ffff71 100.000%);
+  /* background-color: var(--bg-page); */
+  /* background-image: url('/assets/wave.svg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
   background-attachment: fixed;
 
   min-height: 100vh;
@@ -73,20 +76,20 @@ body {
 /* ── AVATAR ──────────────────────────────
    Contenedor del logo.
 ─────────────────────────────────────────*/
-.avatar {
+.logo {
   width: 110px;
   height: 110px;
   margin: 0 auto 20px;
   border-radius: 50%;
-  border: 2px solid var(--acento);
+  border: 2px solid var(--texto-primary);
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.avatar img {
-  width: 100%;
+.logo img {
+  width: 85%;
   height: 100%;
   object-fit: contain;
 }
@@ -211,6 +214,17 @@ body {
 .btn-email:hover {
   background-color: var(--acento);
   color: #ffffff;
+}
+
+.btn-vcf {
+  background-color: transparent;
+  color: #a0a0b0;
+  border: 1px solid #a0a0b0;
+}
+
+.btn-vcf:hover {
+  background-color: #a0a0b0;
+  color: #0a0a0f;
 }
 
 /* ── REDES ───────────────────────────────*/
