@@ -32,15 +32,15 @@
 body {
   /* https://grabient.com/HQFgrA7ANKBsCcMBMBGWMTyRsJlL2AA5YwYJ4BmGI3GWEQsJaS0ABnZhTGpThQxmggLTB2YIkA?angle=45 */
 
-background: linear-gradient(45deg, #000030 0.000%, #61070e 25.000%, #e05211 50.000%, #ffbd39 75.000%, #ffff71 100.000%);
-  /* background-color: var(--bg-page); */
-  /* background-image: url('/assets/wave.svg'); */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  background-attachment: fixed;
+/* https://grabient.com/HQJgnArANKk+1gGYIBYZKQdg0kMA2EfYCADjJgjAKlWDCySgEZgyRKlgsCWoAtAAZgQrDhCihQ1sg6yCaIA?style=angularGradient&angle=180 */
 
-  min-height: 100vh;
+/* https://grabient.com/GwOgrAzAjANCAsZh2FZokCY4QBwAY558w58BOXIgdniPOQWurjF1nHIiA?angle=225 */
+
+/* https://grabient.com/HQRgrAbANMDMYAYYgExNGMNbyiUK0wYaMALCisglcQJwAc54MA7CBEA?angle=270 */
+
+/* https://grabient.com/HQBg7GA0C0wMxwBwwEyhHS9EBYsDYco04BGFLUkELEATimCr2DAFYbhEVSs6R8QA?angle=135 */
+
+background: linear-gradient(135deg, #140000 0.000%, #23071a 25.000%, #321a3a 50.000%, #402b4c 75.000%, #4d394e 100.000%);  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -55,12 +55,13 @@ background: linear-gradient(45deg, #000030 0.000%, #61070e 25.000%, #e05211 50.0
 ─────────────────────────────────────────*/
 .card {
   background-color: var(--bg-seccion);
+  
   width: 100%;
   max-width: 420px;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 24px 80px rgba(108, 99, 255, 0.15);
-  border: 1px solid var(--borde);
+  border: 1px solid var(--texto-secondary);
 }
 
 /* ── PERFIL ──────────────────────────────
@@ -144,9 +145,14 @@ background: linear-gradient(45deg, #000030 0.000%, #61070e 25.000%, #e05211 50.0
 }
 
 .icono {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.6rem;
-  line-height: 1;
-  margin-top: 2px;
+  color: var(--acento);
 }
 
 .servicio-item h3 {
