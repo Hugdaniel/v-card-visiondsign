@@ -222,6 +222,20 @@ document.getElementById("saveContact").addEventListener("click", (event) => {
   saveContact();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const profileFlip = document.getElementById('profileFlip');
+    const TIEMPO_CAMBIO = 3000; // Tiempo en milisegundos entre cada cambio (3s)
+
+    // Inicia el loop que alterne infinitamente
+    setInterval(() => {
+        profileFlip.classList.toggle('flipped');
+    }, TIEMPO_CAMBIO);
+
+    // Opcional: Si el usuario hace clic, da la vuelta manualmente
+    profileFlip.addEventListener('click', () => {
+        profileFlip.classList.toggle('flipped');
+    });
+});
 
 
 

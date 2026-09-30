@@ -78,8 +78,8 @@ background: linear-gradient(135deg, #140000 0.000%, #23071a 25.000%, #321a3a 50.
    Contenedor del logo.
 ─────────────────────────────────────────*/
 .logo {
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 20px;
   border-radius: 50%;
   border: 2px solid var(--texto-primary);
@@ -90,7 +90,7 @@ background: linear-gradient(135deg, #140000 0.000%, #23071a 25.000%, #321a3a 50.
 }
 
 .logo img {
-  width: 85%;
+  width: 100%;
   height: 100%;
   object-fit: contain;
 }
@@ -384,4 +384,66 @@ background: linear-gradient(135deg, #140000 0.000%, #23071a 25.000%, #321a3a 50.
 
 .chat-input button:hover {
   background-color: var(--acento-hover);
+}
+
+/* Configuración de perspectiva para el bloque .logo */
+.logo {
+    position: relative;
+    perspective: 1000px;
+    /* Mantiene el tamaño que ya tenías, ajustalo si usás valores específicos */
+    width: 100px; 
+    height: 100px;
+    margin: 0 auto 15px auto; /* Para centrarlo horizontalmente */
+    cursor: pointer; /* Indica que se puede hacer clic */
+}
+
+.card-front img{
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    border-radius: 50%; /* Si querés que sea circular, remové esta línea si es cuadrado */
+}
+
+/* Transición suave del giro 3D */
+.card-flip {
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estado cuando se da vuelta */
+.card-flip.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Reglas comunes para ambas caras */
+.card-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta el reverso mientras gira */
+    border-radius: 50%; /* Si querés que sea circular, remové esta línea si es cuadrado */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cara Frontal (Logo) */
+.card-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    padding: 10px; /* Ajusta el padding según tus necesidades */
+}
+
+/* Cara Trasera (Foto) */
+.card-back {
+    transform: rotateY(180deg);
 }
